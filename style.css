@@ -1,0 +1,316 @@
+body {
+font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7fc;
+            color: #333;
+            line-height: 1.6;
+}
+
+header {
+            background-color: #667eea; /* Blau Porpra Principal */
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+}
+
+main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+}
+
+h1, h2, h3 {
+            color: #4b5563;
+}
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+section {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ /* Botons (Accions Principals) */
+#accions {
+            text-align: center;
+}
+.btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+}
+.btn {
+            display: block;
+            padding: 1rem 1.5rem;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+}
+.btn-primary {
+            background-color: #667eea;
+            border: 2px solid #667eea;
+}
+.btn-primary:hover {
+            background-color: #556cdd;
+}
+.btn-secondary {
+            background-color: #764ba2; /* Porpra Secundari */
+            border: 2px solid #764ba2;
+}
+.btn-secondary:hover {
+            background-color: #6a4294;
+}
+
+        /* Llistes d'instruccions */
+#instruccions ol {
+            padding-left: 20px;
+}
+#instruccions li {
+            margin-bottom: 0.75rem;
+}
+
+        /* FAQs (Details/Summary) */
+details {
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background-color: #fcfcfd;
+}
+summary {
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            color: #333;
+            padding: 0.5rem 0;
+}
+details[open] {
+            background-color: #f0f3ff;
+            border-color: #667eea;
+}
+
+        /* Peu de pàgina */
+footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.9em;
+            margin-top: 2rem;
+}
+footer a {
+            color: #667eea;
+            text-decoration: none;
+}
+
+        /* Responsive Design */
+@media (min-width: 768px) {
+                .btn-container {
+                flex-direction: row;
+                justify-content: space-around;
+        }
+            .btn {
+                width: 30%; /* Limita l'amplada dels botons en escriptori */
+    }
+}
+
+/* Ocultar checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* --- ICONO HAMBURGUESA --- */
+.menu-icon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    cursor: pointer;
+}
+
+/* Las barras */
+.menu-icon span,
+.menu-icon span::before,
+.menu-icon span::after {
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 26px;
+    border-radius: 2px;
+    position: absolute;
+    transition: .4s;
+}
+
+.menu-icon span::before {
+    content: "";
+    transform: translateY(-8px);
+}
+
+.menu-icon span::after {
+    content: "";
+    transform: translateY(8px);
+}
+
+/* --- ANIMACIÓN: convertir en X cuando esté abierto --- */
+#menu-toggle:checked + .menu-icon span {
+    background-color: transparent;
+}
+
+#menu-toggle:checked + .menu-icon span::before {
+    transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-icon span::after {
+    transform: rotate(-45deg);
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #1c1c1c;
+    padding-top: 70px;
+    transition: .4s ease;
+    z-index: 3;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.4);
+}
+
+.sidebar a {
+    color: white;
+    display: block;
+    padding: 15px 20px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+}
+
+/* Deslizar menú */
+#menu-toggle:checked + .menu-icon + .sidebar {
+    left: 0;
+}
+
+/* --- OVERLAY (fondo oscurecido al abrir) --- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    z-index: 2;
+}
+
+/* Mostrar overlay cuando el menú está activo */
+#menu-toggle:checked ~ .overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+
+    .menu-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .menu-icon span,
+    .menu-icon span::before,
+    .menu-icon span::after {
+        width: 22px;
+    }
+}
+
+#titols {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+#titols1 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    margin-top: -5%;
+}
+
+#logo {
+    margin-left: 79%;
+    width: 20%;
+    height: auto;
+    margin-top: 0%;
+
+}
+
+#subtitul1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-top: -1%;
+}
+
+/* Botón subir arriba */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 5;
+    display: none; /* oculto al principio */
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+#p1 {
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: small;
+}
