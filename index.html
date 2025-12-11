@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aperture Tech Support Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Checkbox oculto -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Icono hamburguesa -->
+    <label for="menu-toggle" class="menu-icon">
+        <span></span>
+    </label>
+
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="servicios.html">Serveis</a>
+        <a href="informacion.html">Preguntes</a>
+        <a href="manual de usuari.html">Manual</a>
+    </nav>
+
+    <!-- Fondo oscurecido al abrir -->
+    <div class="overlay"></div>
+    <button id="back-to-top">↑</button>
+
+    <header>
+        <h1>Portal de Gestió i Suport Tècnic Aperture</h1>
+        <p>El teu punt únic per a gestionar préstecs, devolucions i reportar avaries.</p>
+        <img id="logo" src="Logo progecto.png" alt="logo de la empresa">
+    </header>
+
+    <main>
+         <div class="overlay"></div>
+        <section id="faqs">
+            <h2>Contenido de la pagina web</h2>
+           
+            <details>
+                <summary>Expliacion de la pagina</summary>
+                <p>La pàgina web està seccionada per funcions, veureu que a la part superior esquerra de la pantalla hi ha un símbol de 3 línies, si es dóna veurà diferents pàgines,home que és la pàgina actual, Serveis és la pàgina on hi ha els formularis i una petita explicació del seu funcionament, la secció de preguntes on podeu resoldre les preguntes més comunes i finalment un manual d'usuari on aprendrà a gestionar i utilitzar els formularis.</p>
+            </details>
+            <details>
+                <summary>Com utilitzar el menú lateral</summary>
+                <p>Per utilitzar el menú lateral, simplement feu clic a la icona de les tres línies a la part superior esquerra de la pantalla. Això obrirà el menú lateral on podreu navegar entre les diferents seccions de la pàgina web.</p>
+            </details>
+            <details>
+                <summary>Responsable IT</summary>
+                <ul>
+                    <li>Responsable</li>
+                </ul>
+                <p>David Martín</p>
+                <ul>
+                    <li>Email</li>
+                </ul>
+                <p>david.martin@electrotech.cat</p>
+                <ul>
+                    <li>Telèfon intern</li>
+                </ul>
+                <p>Ext. 301</p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aperture Consulting</p>
+        <p>Sistema desenvolupat per C3</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

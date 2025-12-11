@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="back-to-top">↑</button>
+
+    <!-- Checkbox oculto -->
+<input type="checkbox" id="menu-toggle">
+
+    <!-- Icono menu lateral -->
+<label for="menu-toggle" class="menu-icon">
+<span></span>
+</label>
+
+    <!-- Menú lateral -->
+<nav class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="servicios.html">Serveis</a>
+        <a href="informacion.html">Preguntes</a>
+        <a href="manual de usuari.html">Manual</a>
+</nav>
+<header>
+    <h1>Manual d'usuari</h1>
+    <p>Ha continuacio teniu un manual per sapigue com funcionan els formularis i l'inventari.</p>
+    <img id="logo" src="Logo progecto.png" alt="logo de la empresa">
+</header>
+
+
+
+<section id="faqs">
+<h2>Manual d'usuari</h2>
+           
+    <details>
+        <summary>Introducció al sistema</summary>
+        <p>Aquest sistema ha estat desenvolupat amb l’objectiu principal d’automatitzar el màxim nombre possible de processos interns de l’empresa. A partir de diferents formularis de Google, les dades s’emmagatzemen automàticament en un full de càlcul i, a partir d’aquí, diverses fórmules i scripts gestionen cada cas de manera automàtica.
+El sistema permet, entre altres funcions:</p>
+<ul>
+    <li>Aprovar un préstec en funció d’un conjunt de condicions predefinides.</li>
+    <li>Registrar la devolució d’un equip i deixar-lo de nou disponible de manera immediata, gràcies a l’actualització automàtica dels registres.</li>
+    <li>Reportar una avaria i iniciar automàticament el seu seguiment.</li>
+</ul>
+<p>L’accés és universal per a tot el personal de l’empresa. En estar allotjat al núvol, s’hi pot accedir des de qualsevol lloc i en qualsevol moment. A més, la interfície és prou intuïtiva perquè qualsevol usuari pugui gestionar les seves tasques sense dificultats.</p>
+    </details>
+           
+    <details>
+        <summary>Guia de préstecs</summary>
+        <ul>
+            <li>Com sol·licitar equips (amb captures)</li>
+        </ul>
+        <p>Per poder accedir al formulari per demanar un préstec hem d’accedir a la pàgina que es diu “ serveis” que surt al desplegable a l’esquerra de la pàgina.</p>
+        <img src="imagen index.png" alt="index">
+        <p>Després hem de premer el botó “Sol·licitar Préstec” i ens redigirà automàticament al formulari que haurem d’omplir. </p>
+        <img src="imagen formularios.png" alt="formularios">
+        <img src="imagen correo.png" alt="correo">
+        <p>Quan ja estem dins del formulari només hem de respondre unes preguntes senzilles i informació personal, la resposta s’introdueix a la casella corresponent que es troba sota la pregunta.</p>
+        <img src="imagen formulario.png" alt="formulario">
+        <p> Per últim al arribar al final del formulari,  prenem  el botó d’enviar, si no, la petició mai arribarà.
+Pots fer les sol·licituds que  vulguis, però el programa no et deixarà tenir més de dos equips  assignats simultàniament, per solucionar això hem de retornar els equips amb el formulari de retornades d’equip.</p>
+    </details>
+           
+    <details>
+        <summary>Com retornar equips</summary>
+        <p>El procés de retorn és senzill. Accedint al formulari de retorn mitjançant l’enllaç disponible a la web, només cal respondre unes preguntes bàsiques sobre l’estat del dispositiu i indicar l’ID de l’equip. Un cop enviat, el sistema registrarà la devolució i desassignarà automàticament el dispositiu.</p>
+    </details>
+           
+    <details>
+    <summary>Límits i restriccions</summary>
+        <p>Si es sol·licita un equip quan ja se’n tenen dos assignats, el sistema no permetrà afegir-ne un tercer fins que se’n retorni almenys un. El màxim d’equips en préstec simultani és de dos.
+D’altra banda, incomplir les dates de retorn pot comportar penalitzacions, que s’aplicaran segons les normes establertes pel servei.
+</p>
+    </details>
+
+    <details>
+        <summary>Casos especials</summary>
+        <p>Aquest sistema és dissenyat perquè no hi hagi casos extraordinaris, en el cas que s’hagi de fer una excepció, millor contacteu al correu: david.martinez@electrotech.cat, el David intentarà resoldre les teves necessitats específiques si el programa no ho permet.</p>
+    </details>
+    <details>
+        <summary>Guia d'avaries</summary>
+        <ul>
+            <li>Com notificar problemes</li>
+        </ul>
+        <p>Per notificar noves avaries ens dirigirem al formulari que hi ha a la web anomenada “Reportar avaria”. Dins hem de completar unes preguntes, l’ID identificador de l’equip, qui ho reporta, una descripció breu del problema i la gravetat, per últim prenem el botó d’enviar per terminar.</p>
+        <ul>
+            <li>Què esperar després de notificar</li>
+        </ul>
+        <p>Una vegada s’hagi notificat una avaria, l’equip es marcarà com no disponible, l’equip encarregat de reparacions faran un diagnòstic en profunditat. S’investigarà el preu de la reparació i de seguit es repararà o es donarà de baixa depenent de la rendibilitat relacionada amb el cost </p>
+        <ul>
+            <li>Seguiment de reparacions</li>
+        </ul>
+        <p>En terminar el protocol de reparació l’inventari s’actualitza de forma dinàmica i si l’equip acaba reparant-se el programa disposarà d’un equip més per assignar a un nou prestatari. D’aquesta manera ajudem a reutilitzar els equips, reforçant a l’empresa i al medi ambient. </p>
+    </details>
+    <details>
+        <summary>Dashboard (per David)</summary>
+        <ul>
+            <li>Com interpretar els KPIs</li>
+            <ul>
+                <li>Disponibilitat d’equips</li>
+            </ul>
+            <p>Permet veure si l’inventari és suficient o si falta material. Si hi ha molts equips lliures, es pot interpretar poca demanda o pot indicar saturació o problemes de devolucions.</p>
+            <ul>
+                <li>Flux de préstecs</li>
+            </ul>
+            <p>Les sol·licituds, els préstecs actius i la durada mostren si el sistema funciona amb agilitat. Si els préstecs duren massa, indica falta de control.</p>
+            <ul>
+                <li>Avaries i estat dels equips</li>
+            </ul>
+            <p>La quantitat d’avaries, la gravetat i el nombre de casos pendents de revisió permeten detectar problemes de qualitat, ús inadequat o saturació tècnica. És útil per planificar manteniment, revisar models defectuosos i ajustar pressupostos.</p>
+            <ul>
+                <li>Reparacions i garanties</li>
+            </ul>
+            <p>Veure quantes reparacions hi ha, quantes són en garantia i quantes no es poden reparar ajuda a identificar costos, fiabilitat del proveïdor i necessitat de renovar equips. És útil per negociar amb fabricants </p>
+            <ul>
+                <li>Tendències i colls d’ampolla del sistema</li>
+            </ul>
+            <p>Un dashboard així revela ràpidament on falla el circuit: aprovacions, revisions, reparacions o devolucions. És útil per assignar tasques, prioritzar i millorar l’eficiència global.</p>
+            <ul>
+                <li>Planificació i presa de decisions</li>
+            </ul>
+            <p>Ajuda a decidir si cal comprar equip nou, retirar el vell, reforçar personal tècnic, agilitzar processos o revisar polítiques d’ús. La utilitat principal és permetre decisions basades en dades i no en intuïcions.</p>
+        
+        </ul>
+        <ul>
+            <li>Com usar les pestanyes REPARACIONS</li>
+            <ol>
+                <li>ID_reparació</li>
+                <p> Es simplement un identificador per organitzar correctament cada cas en relació a les reparacions d’equips.</p>
+                <li>Codi_equip</li>
+                <p> l’identificador de l’equip en reparació</p>
+                <li>Tipus_equip</li>
+                <p>Quin tipus d’equip és (ordinador, tàblet…)</p>
+                <li>Problema_detectat</li>
+                <p>El problema reportat, diagnòstic senzill</p>
+                <li>Assignat_a</li>
+                <p>s’ha de modificar manualment, indicant qui ho repararà</p>
+                <li>Tipus_reparació</li>
+                <p> De forma automàtica s’indica si la reparació esta dins de garantia, si ho repara un intern o extern o si s’ha de fer un pagament per realitzar-la. </p>
+                <li>Data inici</li>
+                <p>És la data d’inici de la reparació, a partir d’aquesta es calcula segons els tipus de reparacions quants dies aproximadament es necessitarà per terminar-la.</p>
+                <li>Estat reparació</li>
+                <p>es modifica de forma manual per actualitzar l’estat de la reparació</p>
+                <li>Cost_estimat</li>
+                <p>Depenent del dispositiu o de la garantia es calcula de forma automàtica el preu aproximat de la reparació, per exemple un portàtil 150 €, o sí que està en garantia, 0 €. </p>
+                <li>Proveïdor extern</li>
+                <p>Indica que ho repara.</p>
+                <li>Peces necessàries</li>
+                <p>S’ha d’indicar de forma manual les peces necessàries per donar a terme la reparació</p>
+                <li>Observacions_tecnic</li>
+                <p>Apartat lliure per observacions sobre la reparació (comentaris extraordinaris)</p>
+            </ol>
+        </ul>
+    </details>
+    <details>
+        <summary>Manteniment del sistema</summary>
+        <ul>
+            <li>Com afegir nous equips</li>
+        </ul>
+        <p>Per incorporar nous equips a l’inventari, només cal seguir el mateix format ja establert i afegir les noves files al full principal. Les fórmules configurades s’encarregaran automàticament de processar la informació i actualitzar la resta de fulls relacionats.</p>
+        <ul>
+            <li>Com actualitzar dades</li>
+        </ul>
+        <p>L’inventari només s’ha d’actualitzar manualment quan s’afegeixen equips nous. Per a qualsevol altra modificació, és imprescindible utilitzar els formularis corresponents, ja que permeten mantenir un registre de tots els canvis i actualitzen de manera dinàmica la informació necessària.
+ Per exemple, si cal donar de baixa equips irreparables, s’ha d’utilitzar el formulari d’avaries. Això registrarà que el dispositiu ja no és operatiu, el mostrarà a l’inventari de baixes i, alhora, evitarà afectacions negatives a la resta de dades.</p>
+        <ul>
+            <li>Resolució de problemes comuns</li>
+        </ul>
+        <p>En alguns casos, en afegir noves files, és possible que els intervals de les fórmules no s’actualitzin automàticament i deixin fora les últimes cel·les. Si això passa, només cal modificar l’interval de la fórmula que mostra l’error perquè inclogui totes les files noves.</p>
+    </details>
+</section>
+    <!-- Fondo oscurecido al abrir -->
+<div class="overlay"></div>
+<footer>
+        <p>&copy; 2025 Aperture Consulting</p>
+        <p>Sistema desenvolupat per C3</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
